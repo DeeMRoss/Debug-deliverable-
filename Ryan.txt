@@ -1,0 +1,4 @@
+corrected name, added middle name 
+added space before salary
+handles both empty strings and null
+used help from chat

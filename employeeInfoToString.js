@@ -4,12 +4,16 @@
 // Hint: using a console.log may be useful...
 
 export function employeeInfoToString(employee) {
-    let full_name = generateFullName(employee.first_name, employee.first_name, employee.last_name);
+    // Corrected function call
+    let full_name = generateFullName(employee.first_name, employee.middle_name, employee.last_name);
 
+    // Added space before "Salary"
     return `${full_name}
-     Department: ${employee.department} | Salary:${employee.salary}`;
+Department: ${employee.department} | Salary: ${employee.salary}`;
 }
 
 function generateFullName(first_name, middle_name, last_name) {
-    return `${first_name}${middle_name != null ? " " + middle_name + " " : " " }${last_name}`
+    // Improved spacing handling
+    return `${first_name}${middle_name ? " " + middle_name + " " : " "}${last_name}`;
 }
+
